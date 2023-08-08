@@ -1,7 +1,7 @@
 <script lang="ts">
-    import Counter from "./lib/Counter.svelte";
+    import Input from "./input/Input.svelte";
 </script>
 
 <div id="app">
-    <Counter />
+    <Input />
 </div>
