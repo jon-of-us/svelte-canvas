@@ -2,4 +2,6 @@
     import Counter from "./lib/Counter.svelte";
 </script>
 
-<Counter />
+<div id="app">
+    <Counter />
+</div>
