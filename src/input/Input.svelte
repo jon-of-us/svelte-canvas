@@ -1,12 +1,17 @@
 <script lang="ts">
     import Slider from "./Slider.svelte";
-    import { input } from "./input_store";
-
-    $input.slider1 = 20;
-    $input.slider2 = 80;
+    import { input_store } from "./input_store";
 </script>
 
-<div>
-    <Slider text="Slider 1" value={$input.slider1} />
-    <Slider text="Slider 2" value={$input.slider2} />
+<div class="container">
+    <Slider text="Slider 1" bind:value={$input_store.slider1} />
+    <Slider text="Slider 2" bind:value={$input_store.slider2} />
 </div>
+
+<style>
+    .container {
+        position: absolute;
+        right: 30px;
+        top: 20px;
+    }
+</style>

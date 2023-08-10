@@ -1,7 +1,6 @@
 import { writable } from "svelte/store";
 
-export const input = writable({
+export const input_store = writable({
     slider1: 0,
     slider2: 0,
-    button1: false,
 });
