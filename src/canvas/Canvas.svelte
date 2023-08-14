@@ -5,11 +5,15 @@
         context.fillStyle = `red`;
         context.fillRect(0, 0, width, height);
     };
-    export let width: number;
-    export let height: number;
-    $: width = window.innerWidth - 50;
-    $: height = window.innerHeight - 50;
+    export let width = 0;
+    export let height = 0;
+    let innerWidth: number;
+    let innerHeight: number;
+    $: width = innerWidth - 17;
+    $: height = innerHeight - 17;
 </script>
+
+<svelte:window bind:innerWidth bind:innerHeight />
 
 <div>
     <Canvas {width} {height}>

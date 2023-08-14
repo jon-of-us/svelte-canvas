@@ -10,7 +10,4 @@
 </div>
 
 <style>
-    h1 {
-        color: whitesmoke;
-    }
 </style>
