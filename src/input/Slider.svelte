@@ -33,7 +33,7 @@
 
     input {
         width: 100%;
-        height: 12px;
+        height: 14px;
         cursor: pointer;
         background-color: transparent;
         appearance: none;
@@ -41,8 +41,8 @@
 
     input::-webkit-slider-thumb {
         appearance: none;
-        width: 12px;
-        height: 12px;
+        width: 14px;
+        height: 14px;
         background-color: white;
         border-radius: 50%;
         position: relative;
@@ -51,8 +51,8 @@
 
     input::-moz-range-thumb {
         appearance: none;
-        width: 12px;
-        height: 12px;
+        width: 14px;
+        height: 14px;
         background-color: white;
         border-radius: 50%;
         cursor: pointer;
@@ -60,14 +60,14 @@
 
     input::-webkit-slider-runnable-track {
         opacity: 0.4;
-        height: 12px;
+        height: 14px;
         background-color: grey;
         border-radius: 0.25rem;
     }
 
     input::-moz-range-track {
         opacity: 0.4;
-        height: 12px;
+        height: 14px;
         background-color: grey;
         border-radius: 0.25rem;
     }
