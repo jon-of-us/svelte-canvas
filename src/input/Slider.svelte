@@ -1,4 +1,6 @@
 <script lang="ts">
+    import * as ts from "../settings/template_settings";
+
     export let min = 0;
     export let max = 100;
     export let step = 1;
@@ -7,8 +9,9 @@
     if (initalValue != Infinity) {
         value = initalValue;
     }
+    let color = ts.fontColor;
     /**
-     * string or function that returns string and takes the slider value as input
+     * either string or function that returns string and takes the slider value as input
      * the text `${text}: ${value}` is displayed if string is given
      * */
     export let text: string | ((a: number) => string) = (value: number) =>
@@ -17,7 +20,9 @@
 
 <div class="slidercontainer">
     <input type="range" {min} {max} {step} bind:value />
-    <span>{typeof text == "string" ? `${text}: ${value}` : text(value)}</span>
+    <span style="--color: {color};"
+        >{typeof text == "string" ? `${text}: ${value}` : text(value)}</span
+    >
 </div>
 
 <style>
@@ -38,18 +43,17 @@
         appearance: none;
         width: 12px;
         height: 12px;
-        background-color: rgb(248, 248, 248);
+        background-color: white;
         border-radius: 50%;
         position: relative;
         cursor: pointer;
-        opacity: 0.8;
     }
 
     input::-moz-range-thumb {
         appearance: none;
         width: 12px;
         height: 12px;
-        background-color: rgb(248, 248, 248);
+        background-color: white;
         border-radius: 50%;
         cursor: pointer;
     }
@@ -69,7 +73,7 @@
     }
 
     span {
-        color: #dcdcdc;
+        color: var(--color);
         position: relative;
         left: 0.5rem;
     }

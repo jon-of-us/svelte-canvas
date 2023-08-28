@@ -1,8 +1,11 @@
 <script lang="ts">
     import { Canvas, t, Layer, type Render } from "svelte-canvas";
+    import * as ts from "../settings/template_settings";
+
     let render: Render;
     $: render = ({ context, width, height }) => {
-        context.fillStyle = `red`;
+        // context.fillStyle = "grey";
+        context.fillStyle = ts.backgroundColor;
         context.fillRect(0, 0, width, height);
     };
     export let width = 0;

@@ -8,6 +8,3 @@
     <Input />
     <Canvas />
 </div>
-
-<style>
-</style>
