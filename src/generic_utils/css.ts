@@ -1,4 +1,4 @@
-class CssValue {
+export class CssValue {
     private value: number;
 
     constructor(value: number) {
